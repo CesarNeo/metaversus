@@ -16,7 +16,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <main className="bg-primary-black overflow-hidden">{children}</main>
+        <main className="overflow-hidden bg-primary-black">{children}</main>
       </body>
     </html>
   )

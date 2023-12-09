@@ -13,7 +13,7 @@ function TypingText({ className, text, ...props }: TypingTextProps) {
     <motion.p
       {...props}
       variants={textContainer}
-      className={cn('text-secondary-white text-sm font-normal', className)}
+      className={cn('text-sm font-normal text-secondary-white', className)}
     >
       {Children.toArray(
         Array.from(text).map((char) => (

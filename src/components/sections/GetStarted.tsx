@@ -39,7 +39,12 @@ function GetStarted() {
         </motion.div>
 
         <motion.div
-          variants={fadeIn('left', 'tween', 0.2, 1)}
+          variants={fadeIn({
+            direction: 'left',
+            type: 'tween',
+            delay: 0.2,
+            duration: 1,
+          })}
           className="flex flex-[0.75] flex-col justify-center"
         >
           <TypingText text="| How Metaversus Works" />
