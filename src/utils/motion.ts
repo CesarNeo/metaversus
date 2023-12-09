@@ -1,3 +1,10 @@
+import { Variants } from 'framer-motion'
+
+interface StaggerContainerProps {
+  staggerChildren?: number
+  delayChildren?: number
+}
+
 export const navVariants = {
   hidden: {
     opacity: 0,
@@ -36,15 +43,19 @@ export const slideIn = (direction, type, delay, duration) => ({
   },
 })
 
-export const staggerContainer = (staggerChildren, delayChildren) => ({
-  hidden: {},
-  show: {
-    transition: {
-      staggerChildren,
-      delayChildren,
+export const staggerContainer = ({
+  staggerChildren,
+  delayChildren,
+}: StaggerContainerProps = {}) =>
+  ({
+    hidden: {},
+    show: {
+      transition: {
+        staggerChildren,
+        delayChildren,
+      },
     },
-  },
-})
+  }) as Variants
 
 export const textVariant = (delay) => ({
   hidden: {
