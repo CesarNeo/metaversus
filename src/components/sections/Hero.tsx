@@ -9,7 +9,7 @@ function Hero() {
   return (
     <section className="y_paddings pl-6 sm:pl-16">
       <motion.div
-        variants={staggerContainer}
+        variants={staggerContainer()}
         initial="hidden"
         whileInView="show"
         viewport={{ once: false, amount: 0.25 }}
@@ -31,7 +31,12 @@ function Hero() {
         </div>
 
         <motion.div
-          variants={slideIn('right', 'tween', 0.2, 1)}
+          variants={slideIn({
+            direction: 'right',
+            type: 'tween',
+            delay: 0.2,
+            duration: 1,
+          })}
           className="relative -mt-3 flex h-[18.75rem] w-full sm:h-[31.25rem] md:-mt-5"
         >
           <div className="hero-gradient absolute -top-8 z-0 h-[18.75rem] w-full overflow-hidden rounded-tl-[140px] 2xl:rounded-t-[140px]" />

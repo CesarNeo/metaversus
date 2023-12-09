@@ -17,8 +17,13 @@ function ExploreCard({ active, handleClick, index, world }: ExploreCardProps) {
     <motion.button
       type="button"
       data-active={active === world.id}
-      variants={fadeIn('right', 'spring', index * 0.5, 0.75)}
-      className="ease-out-flex relative flex h-[43.75rem] min-w-[10.625rem] items-center justify-center transition-[flex] duration-[0.7s] data-[active=false]:flex-[2] data-[active=true]:flex-[10] data-[active=false]:lg:flex-[0.5] data-[active=true]:lg:flex-[3.5]"
+      variants={fadeIn({
+        direction: 'right',
+        type: 'spring',
+        delay: index * 0.5,
+        duration: 0.75,
+      })}
+      className="relative flex h-[43.75rem] min-w-[10.625rem] items-center justify-center transition-[flex] duration-[0.7s] ease-out-flex data-[active=false]:flex-[2] data-[active=true]:flex-[10] data-[active=false]:lg:flex-[0.5] data-[active=true]:lg:flex-[3.5]"
       onClick={() => handleClick(world.id)}
     >
       <Image

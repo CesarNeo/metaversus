@@ -19,8 +19,13 @@ function About() {
         <TypingText text="| About Metaversus" className="text-center" />
 
         <motion.p
-          variants={fadeIn('up', 'tween', 0.2, 1)}
-          className="text-secondary-white mt-2 text-center text-xl font-normal sm:text-3xl"
+          variants={fadeIn({
+            direction: 'up',
+            type: 'tween',
+            delay: 0.2,
+            duration: 1,
+          })}
+          className="mt-2 text-center text-xl font-normal text-secondary-white sm:text-3xl"
         >
           <strong className="font-extrabold text-white">Metaverse</strong> is a
           new thing in the future, where you can enjoy the virtual world by
@@ -38,7 +43,12 @@ function About() {
         </motion.p>
 
         <motion.img
-          variants={fadeIn('up', 'tween', 0.3, 1)}
+          variants={fadeIn({
+            direction: 'up',
+            type: 'tween',
+            delay: 0.3,
+            duration: 1,
+          })}
           src="/arrow-down.svg"
           alt="arrow down"
           className="mt-8 h-7 w-[1.125rem] object-contain"
