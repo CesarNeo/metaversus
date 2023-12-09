@@ -14,7 +14,7 @@ function TitleText({ className, ...props }: TitleTextProps) {
       initial="hidden"
       whileInView="show"
       className={cn(
-        'text-secondary-white mt-2 text-5xl font-bold md:text-6xl',
+        'mt-2 text-5xl font-bold text-white md:text-6xl',
         className,
       )}
     />
