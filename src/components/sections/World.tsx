@@ -36,7 +36,7 @@ function World() {
             src="/map.png"
             alt="map"
             className="h-full w-full object-cover"
-            layout="fill"
+            fill
             sizes="(max-width: 768px) 100vw, 768px"
           />
 
@@ -46,7 +46,7 @@ function World() {
                 src="/people-01.png"
                 alt="people"
                 className="h-full w-full rounded-full object-cover"
-                layout="fill"
+                fill
                 sizes="(max-width: 768px) 100vw, 768px"
               />
             </div>
@@ -58,7 +58,7 @@ function World() {
                 src="/people-02.png"
                 alt="people"
                 className="h-full w-full rounded-full object-cover"
-                layout="fill"
+                fill
                 sizes="(max-width: 768px) 100vw, 768px"
               />
             </div>
@@ -70,7 +70,7 @@ function World() {
                 src="/people-03.png"
                 alt="people"
                 className="h-full w-full rounded-full object-cover"
-                layout="fill"
+                fill
                 sizes="(max-width: 768px) 100vw, 768px"
               />
             </div>
