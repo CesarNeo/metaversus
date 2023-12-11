@@ -8,7 +8,6 @@ import {
   WhatsNew,
   World,
   Insights,
-  Feedback,
 } from '@/components/sections'
 
 export default function Home() {
@@ -32,9 +31,8 @@ export default function Home() {
       <World />
 
       <div className="relative">
-        <Insights />
         <div className="gradient-05 z-0" />
-        <Feedback />
+        <Insights />
       </div>
 
       <Footer />
