@@ -1,20 +1,15 @@
 'use client'
 
-import { slideIn, staggerContainer, textVariant } from '@/utils'
+import { slideIn, textVariant } from '@/utils'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
 import Link from 'next/link'
+import StaggerContainer from '../StaggerContainer'
 
 function Hero() {
   return (
     <section className="y_paddings pl-6 sm:pl-16">
-      <motion.div
-        variants={staggerContainer()}
-        initial="hidden"
-        whileInView="show"
-        viewport={{ once: false, amount: 0.25 }}
-        className="inner_width mx-auto flex flex-col"
-      >
+      <StaggerContainer className="inner_width mx-auto flex flex-col">
         <div className="relative z-10 flex flex-col items-center justify-center">
           <motion.h1 variants={textVariant(1.1)} className="hero_heading">
             Metaverse
@@ -43,10 +38,11 @@ function Hero() {
           <Image
             src="/cover.png"
             alt="cover"
-            className="z-10 h-[18.75rem] w-full rounded-tl-[140px] object-cover sm:h-[31.25rem]"
+            className="z-10 h-[18.75rem] w-full rounded-tl-[140px] object-cover sm:h-[31.25rem] 2xl:rounded-t-[140px]"
             fill
             sizes="(min-width: 768px) 100vw, 768px"
             priority
+            quality={100}
           />
 
           <Link
@@ -62,7 +58,7 @@ function Hero() {
             />
           </Link>
         </motion.div>
-      </motion.div>
+      </StaggerContainer>
     </section>
   )
 }

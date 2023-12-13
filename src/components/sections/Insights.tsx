@@ -1,22 +1,14 @@
-'use client'
-
-import { motion } from 'framer-motion'
-import { INSIGHTS, staggerContainer } from '@/utils'
+import { INSIGHTS } from '@/utils'
 import TypingText from '../TypingText'
 import TitleText from '../TitleText'
 import InsightCard from '../InsightCard'
 import { Children } from 'react'
+import StaggerContainer from '../StaggerContainer'
 
 function Insights() {
   return (
     <section className="paddings relative z-10">
-      <motion.div
-        variants={staggerContainer()}
-        initial="hidden"
-        whileInView="show"
-        viewport={{ once: false, amount: 0.25 }}
-        className="inner_width mx-auto flex flex-col"
-      >
+      <StaggerContainer className="inner_width mx-auto flex flex-col">
         <TypingText text="| Insight" className="text-center" />
 
         <TitleText className="text-center">Insight about metaverse</TitleText>
@@ -28,7 +20,7 @@ function Insights() {
             )),
           )}
         </div>
-      </motion.div>
+      </StaggerContainer>
     </section>
   )
 }

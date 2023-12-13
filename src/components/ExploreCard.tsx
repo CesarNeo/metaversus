@@ -32,6 +32,7 @@ function ExploreCard({ active, handleClick, index, world }: ExploreCardProps) {
         fill
         className="h-full w-full rounded-3xl object-cover"
         sizes="(min-width: 1024px) 50vw, 100vw"
+        quality={100}
       />
 
       {active !== world.id ? (

@@ -1,24 +1,18 @@
 'use client'
 
-import { EXPLORE_WORLDS, staggerContainer } from '@/utils'
-import { motion } from 'framer-motion'
+import { EXPLORE_WORLDS } from '@/utils'
 import TypingText from '../TypingText'
 import TitleText from '../TitleText'
 import ExploreCard from '../ExploreCard'
 import { useState } from 'react'
+import StaggerContainer from '../StaggerContainer'
 
 function Explore() {
   const [active, setActive] = useState('world-2')
 
   return (
     <section id="explore" className="paddings">
-      <motion.div
-        variants={staggerContainer()}
-        initial="hidden"
-        whileInView="show"
-        viewport={{ once: false, amount: 0.25 }}
-        className="inner_width flex_center mx-auto flex-col"
-      >
+      <StaggerContainer className="inner_width flex_center mx-auto flex-col">
         <TypingText text="| The World" className="text-center" />
         <TitleText className="text-center">
           Choose the world you want <br className="hidden md:block" /> to
@@ -36,7 +30,7 @@ function Explore() {
             />
           ))}
         </div>
-      </motion.div>
+      </StaggerContainer>
     </section>
   )
 }

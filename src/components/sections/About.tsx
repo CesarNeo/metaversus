@@ -1,21 +1,16 @@
 'use client'
 
-import { fadeIn, staggerContainer } from '@/utils'
+import { fadeIn } from '@/utils'
 import { motion } from 'framer-motion'
 import TypingText from '../TypingText'
+import StaggerContainer from '../StaggerContainer'
 
 function About() {
   return (
     <section className="paddings relative z-10">
       <div className="gradient-02 z-0" />
 
-      <motion.div
-        variants={staggerContainer()}
-        initial="hidden"
-        whileInView="show"
-        viewport={{ once: false, amount: 0.25 }}
-        className="inner_width flex_center mx-auto flex-col"
-      >
+      <StaggerContainer className="inner_width flex_center mx-auto flex-col">
         <TypingText text="| About Metaversus" className="text-center" />
 
         <motion.p
@@ -53,7 +48,7 @@ function About() {
           alt="arrow down"
           className="mt-8 h-7 w-[1.125rem] object-contain"
         />
-      </motion.div>
+      </StaggerContainer>
     </section>
   )
 }
