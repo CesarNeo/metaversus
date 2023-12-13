@@ -1,27 +1,17 @@
 'use client'
 
-import {
-  STARTING_FEATURES,
-  fadeIn,
-  planetVariants,
-  staggerContainer,
-} from '@/utils'
+import { STARTING_FEATURES, fadeIn, planetVariants } from '@/utils'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
 import TypingText from '../TypingText'
 import TitleText from '../TitleText'
 import StartSteps from '../StartSteps'
+import StaggerContainer from '../StaggerContainer'
 
 function GetStarted() {
   return (
     <section className="paddings relative z-10">
-      <motion.div
-        variants={staggerContainer()}
-        initial="hidden"
-        whileInView="show"
-        viewport={{ once: false, amount: 0.25 }}
-        className="inner_width mx-auto flex flex-col gap-8 lg:flex-row"
-      >
+      <StaggerContainer className="inner_width mx-auto flex flex-col gap-8 lg:flex-row">
         <motion.div
           variants={planetVariants('left')}
           className="flex_center flex-1"
@@ -58,7 +48,7 @@ function GetStarted() {
             ))}
           </div>
         </motion.div>
-      </motion.div>
+      </StaggerContainer>
     </section>
   )
 }

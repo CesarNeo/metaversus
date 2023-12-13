@@ -1,21 +1,16 @@
 'use client'
 
-import { fadeIn, staggerContainer } from '@/utils'
+import { fadeIn } from '@/utils'
 import { motion } from 'framer-motion'
 import TypingText from '../TypingText'
 import TitleText from '../TitleText'
 import Image from 'next/image'
+import StaggerContainer from '../StaggerContainer'
 
 function World() {
   return (
     <section className="paddings relative z-10">
-      <motion.div
-        variants={staggerContainer()}
-        initial="hidden"
-        whileInView="show"
-        viewport={{ once: false, amount: 0.25 }}
-        className="inner_width mx-auto flex flex-col"
-      >
+      <StaggerContainer className="inner_width mx-auto flex flex-col">
         <TypingText text="| People on the world" className="text-center" />
 
         <TitleText className="text-center">
@@ -76,7 +71,7 @@ function World() {
             </div>
           </div>
         </motion.div>
-      </motion.div>
+      </StaggerContainer>
     </section>
   )
 }
